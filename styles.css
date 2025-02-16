@@ -1,0 +1,318 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px; 
+    background-color: #472f0b;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Responsive Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: #f5f5f5;
+}
+
+/* Page Sections */
+.page-section {
+    height: 100vh;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+    /* overlay: rgba(171, 150, 150, 0.7); */
+}
+
+.page-section .content {
+    background: rgba(171, 150, 150, 0.7);
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.page-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.page-section p {
+    font-size: 16px;
+}
+.page-section,overlay-image {
+    width: 100%;
+    height: auto;
+    background: url('tec.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #472f0b;
+ }/* Adjust overlay color */
+ .home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px;
+    background-color: #472f0b;
+    color: white;
+    min-height: 100vh; /* Ensure it takes full screen height */
+    width: 100%;
+}
+.footer-section {
+    text-align: center;
+    background-color: #472f0b; /* Match your footer color */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #472f0b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section input {
+    padding: 8px;
+    width: 80%;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.footer-section button {
+    padding: 8px;
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 20px
+}
+.footer-section button:hover {
+    background-color:  #472f0b;
+}
+
+.footer-bottom {
+    padding: 10px;
+    background-color:  #472f0b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: black;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Home Section */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 50px;
+    background-color: #472f0b;
+    color: white;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    gap: 30px;
+}
+
+.home-image img {
+    width: 250px; /* Adjust size as needed */
+    height: 250px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-text {
+    max-width: 400px;
+}
+
+.home-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.home-text p {
+    font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* .overlay-image {
+    width: 100%;
+    height: auto;
+    background: url('your-image.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(255, 0, 0, 0.5); }/* Adjust overlay color */
+ */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity */
+}
+.footer-section {
+    text-align: center;
+    background:#472f0b; /* Adjust to match your footer color */
+    color: white;
+    padding: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800; /* Change color on hover */
+}
+
+
